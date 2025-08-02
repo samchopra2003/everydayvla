@@ -1,11 +1,539 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Document</title>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="EveryDayVLA: A Vision-Language-Action Model for a $300 Generalist Robotic Manipulator with Collaborative Training and Adaptive Horizon Control">
+  <meta name="keywords" content="Vision Language Action (VLA) models, Robotic Manipulator">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="google-site-verification" content="Mv03K1PSHa6DfPDktDXDooEr11AZ1jIliliLan_6mQg" />
+  <title>EveryDayVLA: A Vision-Language-Action Model for a $300 Generalist Robotic Manipulator with Collaborative Training and Adaptive Horizon Contro</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
 </head>
 <body>
-    <h1>EveryDayVLA</h1>
-    <p>Lorem ipsum </p>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <img src="./static/images/splatnav_logo.svg"
+          alt="Splat-Nav Logo" />
+          <h1 class="title is-1 publication-title"> A Vision-Language-Action Model for a $300 Generalist Robotic Manipulator with Collaborative Training and Adaptive Horizon Control </h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=Yc9_o-4AAAAJ&hl=en">Samarth Chopra</a>,</span>
+             <span class="author-block">
+              <a href="/splatnav">Alex McMoil</a>,</span>
+            <span class="author-block">
+              <a href="/splatnav">Ben Carnovale</a>,</span>
+            <span class="author-block">
+              <a href="/splatnav">Evan Sokolson</a>,</span>
+            <span class="author-block">
+              <a href="https://www.engineering.pitt.edu/people/faculty/rajkumar-kubendran/">Rajkumar Kubendran</a>,</span>
+            <span class="author-block">
+            <a href="https://www.engineering.pitt.edu/people/faculty/samuel-dickerson/">Samuel Dickerson</a>,</span>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <br/>
+            <span class="author-block">University of Pittsburgh,</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <!-- <span class="link-block">
+                <a href="https://ieeexplore.ieee.org/document/10494911"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span> -->
+              <span class="link-block">
+                <a href="link to arxiv"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="/vla"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code (Coming Soon)</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href="/vla"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data (Coming Soon)</span>
+                  </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- REPLACE WITH FINAL VIDEO
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="./static/videos/teaser.mp4" type="video/mp4">
+      </video>
+      <p class="has-text-justified"></p>
+      <span class="splat-nav">Splat-Nav</span>
+      enables non-conservative, real-time flight using 3D Gaussian Splatting to represent a map.
+      <span class="splat-nav">Splat-Nav</span>
+      enables non-conservative, real-time flight using 3D Gaussian Splatting to represent a map.
+    </div>
+  </div>
+</section>
+-->
+
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+<!--      <img src="./static/images/SplatNavpipeline.png"-->
+<!--               alt="Splat-Nav architecture."-->
+<!--      />-->
+      <p class="has-text-justified"></p>
+      <span class="splat-nav">Splat-Nav</span>
+        leverages GSplat models to plan safe trajectories in real-time.
+        Splat-Nav consists of two components:
+        (1) Splat-Plan, a safe planning module and
+        (2) Splat-Loc, a robust vision-based pose estimation module.
+        Leveraging rapid collision-checking routines made possible with GSplats,
+        we demonstrate autonomous real-time flight in cluttered environments.
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Vision-Language-Action (VLA) models have transformed robotic manipulation by mapping visual observations and natural-language instructions directly to robotic actions.
+              However, the robots used are typically prohibitively expensive (often costing thousands of dollars) and tend to fail when faced with unfamiliar scenes, and
+              distractors including cluttered environments. To address these limitations, we present EverydayVLA, a low-cost 6-DOF robotic manipulator that can be assembled
+              for around $300 that can handle modest payloads and workspaces. At the heart of EverydayVLA is a single unified model that jointly produces discrete and continuous actions.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+
+<!-- Hardware -->
+<section class="section">
+   <!-- Open Loop -->
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Hardware Experiments</h2>
+        <p>
+          Four objects within the scene (beachball, keyboard, microwave, phonebook) are semnatically segmented
+          and chosen as goal locations for our trials. We run using three control schemes (Open-Loop, Closed-Loop VIO, and Splat-Loc) each demonstrated in the videos below.
+          We refer readers to our <a href="https://arxiv.org/abs/2403.02751">paper</a>.
+        </p>
+        <br/>
+
+        <h3 class="title is-4">Open-Loop</h3>
+        <div class="content has-text-justified">
+          <p>
+          Open-loop schemes do not re-plan, relying on the onboard VIO to track the trajectory.
+          </p>
+          <div class="columns is-centered">
+
+            <div class="column">
+              <div class="content">
+<!--                <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">-->
+<!--                  <source src="./static/videos/beachball_openloop.MP4"-->
+<!--                          type="video/mp4">-->
+<!--                </video>-->
+              </div>
+            </div>
+
+            <div class="column">
+              <div class="columns is-centered">
+                <div class="column content">
+<!--                  <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">-->
+<!--                    <source src="./static/videos/keyboard_openloop.MP4"-->
+<!--                            type="video/mp4">-->
+<!--                  </video>-->
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <!-- <br/> -->
+
+        <h3 class="title is-4"></h3>
+        <div class="content has-text-justified">
+          <div class="columns is-centered">
+
+            <div class="column">
+              <div class="content">
+<!--                <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">-->
+<!--                  <source src="./static/videos/microwave_openloop.MP4"-->
+<!--                          type="video/mp4">-->
+<!--                </video>-->
+              </div>
+            </div>
+
+            <div class="column">
+              <div class="columns is-centered">
+                <div class="column content">
+<!--                  <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">-->
+<!--                    <source src="./static/videos/phonebook_openloop.MP4"-->
+<!--                            type="video/mp4">-->
+<!--                  </video>-->
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Closed Loop VIO-->
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h3 class="title is-4">Closed-Loop VIO</h3>
+
+        <h3 class="title is-4"></h3>
+        <div class="content has-text-justified">
+          <p>
+            Closed-loop uses VIO to estimate poses and re-plan accordingly.
+          </p>
+          <div class="columns is-centered">
+
+            <div class="column">
+              <div class="content">
+<!--                <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">-->
+<!--                  <source src="./static/videos/beachball_closedloop.MP4"-->
+<!--                          type="video/mp4">-->
+<!--                </video>-->
+              </div>
+            </div>
+
+            <div class="column">
+              <div class="columns is-centered">
+                <div class="column content">
+<!--                  <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">-->
+<!--                    <source src="./static/videos/keyboard_closedloop.MP4"-->
+<!--                            type="video/mp4">-->
+<!--                  </video>-->
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <!-- <br/> -->
+
+        <h3 class="title is-4"></h3>
+        <div class="content has-text-justified">
+          <div class="columns is-centered">
+
+            <div class="column">
+              <div class="content">
+<!--                <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">-->
+<!--                  <source src="./static/videos/microwave_closedloop.MP4"-->
+<!--                          type="video/mp4">-->
+<!--                </video>-->
+              </div>
+            </div>
+
+            <div class="column">
+              <div class="columns is-centered">
+                <div class="column content">
+<!--                  <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">-->
+<!--                    <source src="./static/videos/phonebook_closedloop.MP4"-->
+<!--                            type="video/mp4">-->
+<!--                  </video>-->
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Splat Loc -->
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h3 class="title is-4">Splat-Loc</h3>
+
+        <h3 class="title is-4"></h3>
+        <div class="content has-text-justified">
+          <p>
+            Splat-Loc estimates the current drone pose and re-plans a path to the goal location. This method is robust against disturbance and drift.
+          </p>
+          <div class="columns is-centered">
+
+            <div class="column">
+              <div class="content">
+<!--                <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">-->
+<!--                  <source src="./static/videos/beachball_splatloc.MP4"-->
+<!--                          type="video/mp4">-->
+<!--                </video>-->
+              </div>
+            </div>
+
+            <div class="column">
+              <div class="columns is-centered">
+                <div class="column content">
+<!--                  <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">-->
+<!--                    <source src="./static/videos/keyboard_splatloc.MP4"-->
+<!--                            type="video/mp4">-->
+<!--                  </video>-->
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <!-- <br/> -->
+
+        <h3 class="title is-4"></h3>
+        <div class="content has-text-justified">
+          <div class="columns is-centered">
+
+            <div class="column">
+              <div class="content">
+<!--                <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">-->
+<!--                  <source src="./static/videos/microwave_splatloc.MP4"-->
+<!--                          type="video/mp4">-->
+<!--                </video>-->
+              </div>
+            </div>
+
+            <div class="column">
+              <div class="columns is-centered">
+                <div class="column content">
+<!--                  <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">-->
+<!--                    <source src="./static/videos/phonebook_splatloc.MP4"-->
+<!--                            type="video/mp4">-->
+<!--                  </video>-->
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Fast -->
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h3 class="title is-4">Faster Drone Flights</h3>
+
+        <h3 class="title is-4"></h3>
+        <div class="content has-text-justified">
+          <p>
+            We also demonstrate the robustness of Splat-Plan by tracking open-loop trajectories at 1.5 m/s.
+          </p>
+          <div class="columns is-centered">
+
+            <div class="column">
+              <div class="content">
+<!--                <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">-->
+<!--                  <source src="./static/videos/beachball_fast.MP4"-->
+<!--                          type="video/mp4">-->
+<!--                </video>-->
+              </div>
+            </div>
+
+            <div class="column">
+              <div class="columns is-centered">
+                <div class="column content">
+<!--                  <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">-->
+<!--                    <source src="./static/videos/keyboard_fast.MP4"-->
+<!--                            type="video/mp4">-->
+<!--                  </video>-->
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <!-- <br/> -->
+
+        <h3 class="title is-4"></h3>
+        <div class="content has-text-justified">
+          <div class="columns is-centered">
+
+            <div class="column">
+              <div class="content">
+<!--                <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">-->
+<!--                  <source src="./static/videos/microwave_fast.MP4"-->
+<!--                          type="video/mp4">-->
+<!--                </video>-->
+              </div>
+            </div>
+
+            <div class="column">
+              <div class="columns is-centered">
+                <div class="column content">
+<!--                  <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">-->
+<!--                    <source src="./static/videos/phonebook_fast.MP4"-->
+<!--                            type="video/mp4">-->
+<!--                  </video>-->
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Endurance -->
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h3 class="title is-4">Endurance Flights</h3>
+
+        <h3 class="title is-4"></h3>
+        <div class="content has-text-justified">
+          <p>
+            Finally, closed-loop re-planning using Splat-Plan and Splat-Loc can safely navigate cluttered environments over long periods of time.
+          </p>
+          <div class="columns is-centered">
+
+            <div class="column">
+              <div class="content">
+<!--                <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">-->
+<!--                  <source src="./static/videos/endurance1_compressed.mp4"-->
+<!--                          type="video/mp4">-->
+<!--                </video>-->
+              </div>
+            </div>
+
+            <div class="column">
+              <div class="columns is-centered">
+                <div class="column content">
+<!--                  <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">-->
+<!--                    <source src="./static/videos/endurance2_compressed.mp4"-->
+<!--                            type="video/mp4">-->
+<!--                  </video>-->
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+</section>
+
+
+
+<!--<section class="section" id="BibTeX">-->
+<!--  <div class="container is-max-desktop content">-->
+<!--    <h2 class="title">BibTeX</h2>-->
+<!--    <pre><code>-->
+<!--      @misc{chen2024splatnav,-->
+<!--        title={Splat-Nav: Safe Real-Time Robot Navigation in Gaussian Splatting Maps},-->
+<!--        author={Timothy Chen and Ola Shorinwa and Joseph Bruno and Aiden Swann and Javier Yu and Weijia Zeng and Keiko Nagami and Philip Dames and Mac Schwager},-->
+<!--        year={2024},-->
+<!--        eprint={2403.02751},-->
+<!--        archivePrefix={arXiv},-->
+<!--        primaryClass={cs.RO},-->
+<!--        url={https://arxiv.org/abs/2403.02751},-->
+<!--      }-->
+<!--    </code></pre>-->
+<!--  </div>-->
+<!--</section>-->
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>. This webpage template is from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
+            We sincerely thank <a href="https://keunhong.com/">Keunhong Park</a> for developing and open-sourcing this template.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
 </body>
 </html>
