@@ -159,10 +159,15 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Vision-Language-Action (VLA) models have transformed robotic manipulation by mapping visual observations and natural-language instructions directly to robotic actions.
-              However, the robots used are typically prohibitively expensive (often costing thousands of dollars) and tend to fail when faced with unfamiliar scenes, and
-              distractors including cluttered environments. To address these limitations, we present EverydayVLA, a low-cost 6-DOF robotic manipulator that can be assembled
-              for around $300 that can handle modest payloads and workspaces. At the heart of EverydayVLA is a single unified model that jointly produces discrete and continuous actions.
+            While Vision–Language–Action (VLA) models map visual inputs and language instructions directly to robot 
+            actions, they often rely on costly hardware and struggle in novel or cluttered scenes. We introduce 
+            EverydayVLA, a 6-DOF manipulator that can be assembled for $300, capable of modest payloads and 
+            workspaces. A single unified model jointly outputs discrete and continuous actions, and our 
+            adaptive-horizon ensembler monitors motion uncertainty to trigger on-the-fly replanning for safe, 
+            reliable operation. On LIBERO, EverydayVLA matches state-of-the-art success rates, and in real-world 
+            tests it outperforms prior methods by 49% in-distribution and 34.9% out-of-distribution. By combining a 
+            state-of-the-art VLA with cost-effective hardware, EverydayVLA democratizes access to a robotic 
+            foundation model, and paves the way for economical use in homes and research labs alike.
           </p>
         </div>
       </div>
@@ -180,9 +185,8 @@
       <div class="column is-full-width">
         <h2 class="title is-3">Hardware Experiments</h2>
         <p>
-          Four objects within the scene (beachball, keyboard, microwave, phonebook) are semnatically segmented
-          and chosen as goal locations for our trials. We run using three control schemes (Open-Loop, Closed-Loop VIO, and Splat-Loc) each demonstrated in the videos below.
-          We refer readers to our <a href="https://arxiv.org/abs/2403.02751">paper</a>.
+          For evaluation of in-distribution performance against other other models we select three objects: 
+          block, ball, rocks. 
         </p>
         <br/>
 
