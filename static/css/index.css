@@ -160,3 +160,12 @@ body {
 #architecture-image {
   max-height: 350px;
 }
+
+.columns.is-vcentered {
+  align-items: center;
+}
+.container.is-max-desktop {
+  max-width: 1200px !important;
+  width: 100%;
+  margin: 0 auto;
+}

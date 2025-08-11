@@ -43,7 +43,7 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <img src="./static/images/splatnav_logo.svg"
+          <img src="./static/images/overview.svg"
           alt="Splat-Nav Logo" />
           <h1 class="title is-1 publication-title"> A Vision-Language-Action Model for a $300 Generalist Robotic Manipulator with Collaborative Training and Adaptive Horizon Control </h1>
           <div class="is-size-5 publication-authors">
@@ -135,10 +135,11 @@
 
 <section class="hero teaser">
   <div class="container is-max-desktop">
-    <div class="hero-body">
-<!--      <img src="./static/images/SplatNavpipeline.png"-->
-<!--               alt="Splat-Nav architecture."-->
-<!--      />-->
+    <div class="hero-body" style="align-items: center;">
+     <img src="./static/images/overview.svg"
+              alt="Splat-Nav architecture."
+              style="width: 850px; display: block; margin: 0 auto;"
+     />
       <p class="has-text-justified"></p>
       <span class="EveryDayVLA">EveryDayVLA</span>
         leverages VLA models to plan robotic actions in real-time.
@@ -176,327 +177,349 @@
   </div>
 </section>
 
-
 <!-- Hardware -->
 <section class="section">
-   <!-- Open Loop -->
+  <!-- Open Loop -->
   <div class="container is-max-desktop">
     <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Hardware Experiments</h2>
-        <p>
-          For evaluation of in-distribution performance against other other models we select three objects: 
-          block, ball, rocks. 
-        </p>
-        <br/>
-
-        <h3 class="title is-4">Open-Loop</h3>
-        <div class="content has-text-justified">
+        <div class="column is-full-width">
+          <h2 class="title is-3">Hardware Experiments</h2>
           <p>
-          Open-loop schemes do not re-plan, relying on the onboard VIO to track the trajectory.
+              We tested our model, EverydayVLA, against OpenVLA and OpenVLA-OFT trained on our dataset.
           </p>
-          <div class="columns is-centered">
-
-            <div class="column">
-              <div class="content">
-<!--                <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">-->
-<!--                  <source src="./static/videos/beachball_openloop.MP4"-->
-<!--                          type="video/mp4">-->
-<!--                </video>-->
-              </div>
-            </div>
-
-            <div class="column">
-              <div class="columns is-centered">
-                <div class="column content">
-<!--                  <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">-->
-<!--                    <source src="./static/videos/keyboard_openloop.MP4"-->
-<!--                            type="video/mp4">-->
-<!--                  </video>-->
-                </div>
-              </div>
-            </div>
-
+          <br/>
+          <h3 class="title is-4">In-distribution Tasks</h3>
+          <div class="content has-text-justified">
+              <p>
+                We tested the models on objects seen in training: block, ball, and rock.
+              </p>
           </div>
-        </div>
-        <!-- <br/> -->
-
-        <h3 class="title is-4"></h3>
-        <div class="content has-text-justified">
-          <div class="columns is-centered">
-
-            <div class="column">
-              <div class="content">
-<!--                <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">-->
-<!--                  <source src="./static/videos/microwave_openloop.MP4"-->
-<!--                          type="video/mp4">-->
-<!--                </video>-->
+          <div class="columns is-vcentered interpolation-panel">
+              <div class="column has-text-centered">
+                <h5>
+                    EveryDayVLA (ours)
+                    <br>
+                    Move the block away from the robot
+                </h5>
+                <h5 style="font-size:30px">✅</h5>
+                <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+                    <source src="./static/videos/everydayvla_block_away.MOV"
+                      type="video/mp4">
+                </video>
               </div>
-            </div>
-
-            <div class="column">
-              <div class="columns is-centered">
-                <div class="column content">
-<!--                  <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">-->
-<!--                    <source src="./static/videos/phonebook_openloop.MP4"-->
-<!--                            type="video/mp4">-->
-<!--                  </video>-->
-                </div>
+              <div class="column has-text-centered">
+                <h5>
+                    OpenVLA
+                    <br>
+                    Move the block away from the robot
+                </h5>
+                <h5 style="font-size:30px">✅</h5>
+                <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+                    <source src="./static/videos/openvla_block_away.MOV"
+                      type="video/mp4">
+                </video>
               </div>
-            </div>
-
+              <div class="column has-text-centered">
+                <h5>
+                    OpenVLA-OFT
+                    <br>
+                    Move the block away from the robot
+                </h5>
+                <h5 style="font-size:30px">✅</h5>
+                <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+                    <source src="./static/videos/oft_block_away.MOV"
+                      type="video/mp4">
+                </video>
+              </div>
           </div>
-        </div>
+          <!-- <br> -->
+          <div class="columns is-vcentered interpolation-panel">
+              <div class="column has-text-centered">
+                <h5>
+                    EveryDayVLA (ours)
+                    <br>
+                    Move the ball away from the robot
+                </h5>
+                <h5 style="font-size:30px">✅</h5>
+                <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+                    <source src="./static/videos/everydayvla_ball_away.MOV"
+                      type="video/mp4">
+                </video>
+              </div>
+              <div class="column has-text-centered">
+                <h5>
+                    OpenVLA
+                    <br>
+                    Move the ball away from the robot
+                </h5>
+                <h5 style="font-size:30px">✅</h5>
+                <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+                    <source src="./static/videos/openvla_block_away.MOV"
+                      type="video/mp4">
+                </video>
+              </div>
+              <div class="column has-text-centered">
+                <h5>
+                    OpenVLA-OFT
+                    <br>
+                    Move the block ball from the robot
+                </h5>
+                <h5 style="font-size:30px">✅</h5>
+                <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+                    <source src="./static/videos/oft_block_away.MOV"
+                      type="video/mp4">
+                </video>
+              </div>
+          </div>
+          <div class="columns is-vcentered interpolation-panel">
+              <div class="column has-text-centered">
+                <h5>
+                    EveryDayVLA (ours)
+                    <br>
+                    Move the rock away from the robot
+                </h5>
+                <h5 style="font-size:30px">✅</h5>
+                <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+                    <source src="./static/videos/everydayvla_rock_away.MOV"
+                      type="video/mp4">
+                </video>
+              </div>
+              <div class="column has-text-centered">
+                <h5>
+                    OpenVLA
+                    <br>
+                    Move the rock away from the robot
+                </h5>
+                <h5 style="font-size:30px">✅</h5>
+                <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+                    <source src="./static/videos/openvla_rock_away.MOV"
+                      type="video/mp4">
+                </video>
+              </div>
+              <div class="column has-text-centered">
+                <h5>
+                    OpenVLA-OFT
+                    <br>
+                    Move the rock away from the robot
+                </h5>
+                <h5 style="font-size:30px">✅</h5>
+                <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+                    <source src="./static/videos/oft_rock_away.MOV"
+                      type="video/mp4">
+                </video>
+              </div>
+          </div>
+          <div class="content has-text-justified">
+            <p>Additionally, we tested the models on other actions seen in training.</p>
+          </div>
+          <div class="columns is-vcentered interpolation-panel">
+              <div class="column has-text-centered">
+                <h5>
+                    EveryDayVLA (ours)
+                    <br>
+                    Move the block to the left
+                </h5>
+                <h5 style="font-size:30px">✅</h5>
+                <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+                    <source src="./static/videos/everydayvla_block_left.MOV"
+                      type="video/mp4">
+                </video>
+              </div>
+              <div class="column has-text-centered">
+                <h5>
+                    OpenVLA
+                    <br>
+                    Move the block to the left
+                </h5>
+                <h5 style="font-size:30px">✅</h5>
+                <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+                    <source src="./static/videos/openvla_block_left.MOV"
+                      type="video/mp4">
+                </video>
+              </div>
+              <div class="column has-text-centered">
+                <h5>
+                    OpenVLA-OFT
+                    <br>
+                    Move the block to the left
+                </h5>
+                <h5 style="font-size:30px">✅</h5>
+                <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+                    <source src="./static/videos/oft_block_left.MOV"
+                      type="video/mp4">
+                </video>
+              </div>
+          </div>
+          <br>
+          <h3 class="title is-4">Out-of-Distribution Tasks</h3>
+          <div class="content has-text-justified">
+              <p>
+                We also tested the models on objects ot seen in training: a blue flask and a creeper keychain.
+              </p>
+          </div>
+          <div class="columns is-vcentered interpolation-panel">
+              <div class="column has-text-centered">
+                <h5>
+                    EveryDayVLA (ours)
+                    <br>
+                    Move the flask away from the robot
+                </h5>
+                <h5 style="font-size:30px">✅</h5>
+                <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+                    <source src="./static/videos/everydayvla_flask_away.MOV"
+                      type="video/mp4">
+                </video>
+              </div>
+              <div class="column has-text-centered">
+                <h5>
+                    OpenVLA
+                    <br>
+                    Move the flask away from the robot
+                </h5>
+                <h5 style="font-size:30px">✅</h5>
+                <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+                    <source src="./static/videos/openvla_flask_away.MOV"
+                      type="video/mp4">
+                </video>
+              </div>
+              <div class="column has-text-centered">
+                <h5>
+                    OpenVLA-OFT
+                    <br>
+                    Move the flask away from the robot
+                </h5>
+                <h5 style="font-size:30px">✅</h5>
+                <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+                    <source src="./static/videos/oft_flask_away.MOV"
+                      type="video/mp4">
+                </video>
+              </div>
+          </div>
+          <div class="columns is-vcentered interpolation-panel">
+              <div class="column has-text-centered">
+                <h5>
+                    EveryDayVLA (ours)
+                    <br>
+                    Move the green toy away from the robot
+                </h5>
+                <h5 style="font-size:30px">✅</h5>
+                <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+                    <source src="./static/videos/everydayvla_creeper_away.MOV"
+                      type="video/mp4">
+                </video>
+              </div>
+              <div class="column has-text-centered">
+                <h5>
+                    OpenVLA
+                    <br>
+                    Move the green toy away from the robot
+                </h5>
+                <h5 style="font-size:30px">✅</h5>
+                <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+                    <source src="./static/videos/openvla_creeper_away.MOV"
+                      type="video/mp4">
+                </video>
+              </div>
+              <div class="column has-text-centered">
+                <h5>
+                    OpenVLA-OFT
+                    <br>
+                    Move the green toy away from the robot
+                </h5>
+                <h5 style="font-size:30px">✅</h5>
+                <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+                    <source src="./static/videos/oft_creeper_away.MOV"
+                      type="video/mp4">
+                </video>
+              </div>
+          </div>
+            <br>
+          <h3 class="title is-4">Distractions</h3>
+          <div class="content has-text-justified">
+              <p>
+                We tested with static and dynamic distractions
+              </p>
+          </div>
+          <div class="columns is-vcentered interpolation-panel">
+              <div class="column has-text-centered">
+                <h5>
+                    EveryDayVLA (ours)
+                    <br>
+                    Move the block away from the robot
+                </h5>
+                <h5 style="font-size:30px">✅</h5>
+                <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+                    <source src="./static/videos/everydayvla_block_away_cluttered.MOV"
+                      type="video/mp4">
+                </video>
+              </div>
+              <div class="column has-text-centered">
+                <h5>
+                    OpenVLA
+                    <br>
+                    Move the block away from the robot
+                </h5>
+                <h5 style="font-size:30px">✅</h5>
+                <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+                    <source src="./static/videos/openvla_block_away_cluttered.MOV"
+                      type="video/mp4">
+                </video>
+              </div>
+              <div class="column has-text-centered">
+                <h5>
+                    OpenVLA-OFT
+                    <br>
+                    Move the block away from the robot
+                </h5>
+                <h5 style="font-size:30px">✅</h5>
+                <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+                    <source src="./static/videos/oft_block_away_cluttered.MOV"
+                      type="video/mp4">
+                </video>
+              </div>
+          </div>
+          <div class="columns is-vcentered interpolation-panel">
+              <div class="column has-text-centered">
+                <h5>
+                    EveryDayVLA (ours)
+                    <br>
+                    Move the block away from the robot
+                </h5>
+                <h5 style="font-size:30px">✅</h5>
+                <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+                    <source src="./static/videos/everydayvla_block_away_movingbackground.MOV"
+                      type="video/mp4">
+                </video>
+              </div>
+              <div class="column has-text-centered">
+                <h5>
+                    OpenVLA
+                    <br>
+                    Move the block away from the robot
+                </h5>
+                <h5 style="font-size:30px">✅</h5>
+                <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+                    <source src="./static/videos/openvla_block_away_movingbackground.MOV"
+                      type="video/mp4">
+                </video>
+              </div>
+              <div class="column has-text-centered">
+                <h5>
+                    OpenVLA-OFT
+                    <br>
+                    Move the block away from the robot
+                </h5>
+                <h5 style="font-size:30px">✅</h5>
+                <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+                    <source src="./static/videos/oft_block_away_movingbackground.MOV"
+                      type="video/mp4">
+                </video>
+              </div>
+          </div>
 
-      </div>
+        </div>
     </div>
   </div>
-
-  <!-- Closed Loop VIO-->
-  <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h3 class="title is-4">Closed-Loop VIO</h3>
-
-        <h3 class="title is-4"></h3>
-        <div class="content has-text-justified">
-          <p>
-            Closed-loop uses VIO to estimate poses and re-plan accordingly.
-          </p>
-          <div class="columns is-centered">
-
-            <div class="column">
-              <div class="content">
-<!--                <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">-->
-<!--                  <source src="./static/videos/beachball_closedloop.MP4"-->
-<!--                          type="video/mp4">-->
-<!--                </video>-->
-              </div>
-            </div>
-
-            <div class="column">
-              <div class="columns is-centered">
-                <div class="column content">
-<!--                  <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">-->
-<!--                    <source src="./static/videos/keyboard_closedloop.MP4"-->
-<!--                            type="video/mp4">-->
-<!--                  </video>-->
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-        <!-- <br/> -->
-
-        <h3 class="title is-4"></h3>
-        <div class="content has-text-justified">
-          <div class="columns is-centered">
-
-            <div class="column">
-              <div class="content">
-<!--                <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">-->
-<!--                  <source src="./static/videos/microwave_closedloop.MP4"-->
-<!--                          type="video/mp4">-->
-<!--                </video>-->
-              </div>
-            </div>
-
-            <div class="column">
-              <div class="columns is-centered">
-                <div class="column content">
-<!--                  <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">-->
-<!--                    <source src="./static/videos/phonebook_closedloop.MP4"-->
-<!--                            type="video/mp4">-->
-<!--                  </video>-->
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </div>
-
-
-  <!-- Splat Loc -->
-  <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h3 class="title is-4">Splat-Loc</h3>
-
-        <h3 class="title is-4"></h3>
-        <div class="content has-text-justified">
-          <p>
-            Splat-Loc estimates the current drone pose and re-plans a path to the goal location. This method is robust against disturbance and drift.
-          </p>
-          <div class="columns is-centered">
-
-            <div class="column">
-              <div class="content">
-<!--                <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">-->
-<!--                  <source src="./static/videos/beachball_splatloc.MP4"-->
-<!--                          type="video/mp4">-->
-<!--                </video>-->
-              </div>
-            </div>
-
-            <div class="column">
-              <div class="columns is-centered">
-                <div class="column content">
-<!--                  <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">-->
-<!--                    <source src="./static/videos/keyboard_splatloc.MP4"-->
-<!--                            type="video/mp4">-->
-<!--                  </video>-->
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-        <!-- <br/> -->
-
-        <h3 class="title is-4"></h3>
-        <div class="content has-text-justified">
-          <div class="columns is-centered">
-
-            <div class="column">
-              <div class="content">
-<!--                <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">-->
-<!--                  <source src="./static/videos/microwave_splatloc.MP4"-->
-<!--                          type="video/mp4">-->
-<!--                </video>-->
-              </div>
-            </div>
-
-            <div class="column">
-              <div class="columns is-centered">
-                <div class="column content">
-<!--                  <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">-->
-<!--                    <source src="./static/videos/phonebook_splatloc.MP4"-->
-<!--                            type="video/mp4">-->
-<!--                  </video>-->
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </div>
-
-  <!-- Fast -->
-  <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h3 class="title is-4">Faster Drone Flights</h3>
-
-        <h3 class="title is-4"></h3>
-        <div class="content has-text-justified">
-          <p>
-            We also demonstrate the robustness of Splat-Plan by tracking open-loop trajectories at 1.5 m/s.
-          </p>
-          <div class="columns is-centered">
-
-            <div class="column">
-              <div class="content">
-<!--                <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">-->
-<!--                  <source src="./static/videos/beachball_fast.MP4"-->
-<!--                          type="video/mp4">-->
-<!--                </video>-->
-              </div>
-            </div>
-
-            <div class="column">
-              <div class="columns is-centered">
-                <div class="column content">
-<!--                  <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">-->
-<!--                    <source src="./static/videos/keyboard_fast.MP4"-->
-<!--                            type="video/mp4">-->
-<!--                  </video>-->
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-        <!-- <br/> -->
-
-        <h3 class="title is-4"></h3>
-        <div class="content has-text-justified">
-          <div class="columns is-centered">
-
-            <div class="column">
-              <div class="content">
-<!--                <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">-->
-<!--                  <source src="./static/videos/microwave_fast.MP4"-->
-<!--                          type="video/mp4">-->
-<!--                </video>-->
-              </div>
-            </div>
-
-            <div class="column">
-              <div class="columns is-centered">
-                <div class="column content">
-<!--                  <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">-->
-<!--                    <source src="./static/videos/phonebook_fast.MP4"-->
-<!--                            type="video/mp4">-->
-<!--                  </video>-->
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-
-      </div>
-    </div>
-  </div>
-
-  <!-- Endurance -->
-  <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h3 class="title is-4">Endurance Flights</h3>
-
-        <h3 class="title is-4"></h3>
-        <div class="content has-text-justified">
-          <p>
-            Finally, closed-loop re-planning using Splat-Plan and Splat-Loc can safely navigate cluttered environments over long periods of time.
-          </p>
-          <div class="columns is-centered">
-
-            <div class="column">
-              <div class="content">
-<!--                <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">-->
-<!--                  <source src="./static/videos/endurance1_compressed.mp4"-->
-<!--                          type="video/mp4">-->
-<!--                </video>-->
-              </div>
-            </div>
-
-            <div class="column">
-              <div class="columns is-centered">
-                <div class="column content">
-<!--                  <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">-->
-<!--                    <source src="./static/videos/endurance2_compressed.mp4"-->
-<!--                            type="video/mp4">-->
-<!--                  </video>-->
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
 
 
 </section>
